@@ -1,0 +1,7 @@
+app/gitAuth/projects/*
+app/gitAuth/confs/*
+db.sqlite3
+*.pyc
+
+!app/gitAuth/projects/.keep
+!app/gitAuth/confs/.keep
