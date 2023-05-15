@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from django.conf import settings
 import requests
 from django.shortcuts import render
-from gitAuth.models import UserAuth
+from git_auth.models import UserAuth
 from django.contrib.auth import get_user_model
 from datetime import datetime, timedelta
 from rest_framework import status
@@ -16,7 +16,7 @@ import json
 User = get_user_model()
 
 def get_jwt():
-    with open(f"{settings.BASE_DIR}\gitAuth\confs\github-jwt.json", "r") as file:
+    with open(f"{settings.BASE_DIR}\git_auth\confs\github-jwt.json", "r") as file:
         jwt = json.load(file)
     return jwt['jwt']
 

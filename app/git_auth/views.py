@@ -5,12 +5,12 @@ from rest_framework import views
 from rest_framework.response import Response
 from django.conf import settings
 import requests
-from gitAuth.models import UserAuth
+from git_auth.models import UserAuth
 from django.contrib.auth import get_user_model
 import json
-from gitAuth.helpers.generate_jwt import create_token
-from gitAuth.helpers.clone_repo import clone
-from gitAuth.serializers import GitHubSaveUserDataSerializer
+from git_auth.helpers.generate_jwt import create_token
+from git_auth.helpers.clone_repo import clone
+from git_auth.serializers import GitHubSaveUserDataSerializer
 
 User = get_user_model()
 
@@ -35,13 +35,13 @@ def get_installation_headers():
     return headers
 
 def get_jwt():
-    with open(f"{settings.BASE_DIR}\gitAuth\confs\github-jwt.json", "r") as file:
+    with open(f"{settings.BASE_DIR}\git_auth\confs\github-jwt.json", "r") as file:
         jwt = json.load(file)
     return jwt['jwt']
 
 def make_jwt():
     create_token()
-    with open(f"{settings.BASE_DIR}\gitAuth\confs\github-jwt.json", "r") as file:
+    with open(f"{settings.BASE_DIR}\git_auth\confs\github-jwt.json", "r") as file:
         jwt = json.load(file)
     return jwt['jwt']
   

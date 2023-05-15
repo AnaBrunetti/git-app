@@ -1,5 +1,5 @@
 from django.contrib import admin
-from gitAuth.models import UserAuth
+from git_auth.models import UserAuth
 
 # Register your models here.
 

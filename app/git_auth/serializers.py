@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from gitAuth.models import UserAuth
+from git_auth.models import UserAuth
 
 class GitHubSaveUserDataSerializer(serializers.ModelSerializer):
     

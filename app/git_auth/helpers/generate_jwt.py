@@ -7,7 +7,7 @@ import json
 
 def create_token():
     # Open PEM
-    with open(f"{settings.BASE_DIR}\gitAuth\confs\pem-key.private-key.pem", "rb") as pem_file:
+    with open(f"{settings.BASE_DIR}\git_auth\confs\pem-key.private-key.pem", "rb") as pem_file:
         signing_key = jwt.jwk_from_pem(pem_file.read())
 
     # Get the App ID
@@ -32,5 +32,5 @@ def create_token():
 
     json_object = json.dumps(jwt_token, indent=1)
 
-    with open(f"{settings.BASE_DIR}\gitAuth\confs\github-jwt.json", "w+") as file:
+    with open(f"{settings.BASE_DIR}\git_auth\confs\github-jwt.json", "w+") as file:
             file.write(json_object)

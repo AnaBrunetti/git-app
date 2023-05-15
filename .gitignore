@@ -1,7 +1,7 @@
-app/gitAuth/projects/*
-app/gitAuth/confs/*
+app/git_auth/projects/*
+app/git_auth/confs/*
 db.sqlite3
 *.pyc
 
-!app/gitAuth/projects/.keep
-!app/gitAuth/confs/.keep
+!app/git_auth/projects/.keep
+!app/git_auth/confs/.keep

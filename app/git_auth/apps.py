@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class GitauthConfig(AppConfig):
+class GitAuthConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'gitAuth'
+    name = 'git_auth'

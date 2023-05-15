@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.conf.urls import url
-from gitAuth.views import (
+from git_auth.views import (
     GitHubVerifyView,
     GitHubUserReposView,
     GitHubAppAccessTokenView,
