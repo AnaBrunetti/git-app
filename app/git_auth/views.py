@@ -11,6 +11,7 @@ import json
 from git_auth.helpers.generate_jwt import create_token
 from git_auth.helpers.clone_repo import clone
 from git_auth.serializers import GitHubSaveUserDataSerializer
+from rest_framework import status
 
 User = get_user_model()
 
@@ -125,3 +126,12 @@ class GitHubCloneReposView(views.APIView):
             return Response(response)
         except Exception as error:
                 return Response(error)
+            
+            
+class GitHubPushWHView(views.APIView):
+    
+    def post(self, request):
+        
+        data = request.data
+        print(data)
+        return Response({}, status=status.HTTP_200_OK)

@@ -6,6 +6,7 @@ from git_auth.views import (
     GitHubAppAccessTokenView,
     GitHubCloneReposView,
     GitHubSaveUserDataView,
+    GitHubPushWHView,
 )
 
 urlpatterns = [
@@ -14,4 +15,5 @@ urlpatterns = [
     url(r'^user-app-token', GitHubAppAccessTokenView.as_view(), name='user-app-token'),
     url(r'^user-repos', GitHubUserReposView.as_view(), name='user-repos'),
     url(r'^clone-repo', GitHubCloneReposView.as_view(), name='clone-repo'),
+     url(r'^push-wh', GitHubPushWHView.as_view(), name='push-wh'),
 ]

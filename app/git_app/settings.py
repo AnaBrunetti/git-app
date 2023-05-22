@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8at)5wvu^rz6b6$8j701ds)bw0t!x41c(8kl_=#=&w2+@d2q0e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,4 +137,4 @@ REST_FRAMEWORK = {
 CLIENT_SECRET = "778d2fa62de42e58b46faee5296c24d4a4472144"
 CLIENT_ID = "Iv1.894d4e82851800ed"
 REDIRECT_URL = "http://localhost:8000/api/save-user-data"
-APP_ID = "####"
+APP_ID = "291547"
